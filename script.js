@@ -19,8 +19,8 @@ addNovasTarefas();
 
 function criarBotaoTarefas(Adicione) {
     let tarefaBotao = document.querySelector('#lista-tarefas');
-    let novoBotao = document.createElement('criar-tarefa');
-    let novoBotaoID = 'texto-tarefa';
+    let novoBotao = document.createElement('btn-primary');
+    let novoBotaoID = 'criar-tarefa';
 
     novoBotao.innerHTML = Adicione;
     novoBotao.id = novoBotaoID;
