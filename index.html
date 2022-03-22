@@ -3,35 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Listener</title>
-    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo
-    </p>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>Minha Lista de Tarefas</header>
-    <section>
-        <input type="text" id="texto-tarefa">
-        <ol id="lista-tarefas"></ol>
-        <button type="button" class="btn btn-primary" id="criar-tarefa">Adicionar</button>
-    </section>
-    <section id="list-control">
-        <button class="btn btn-danger btn-sm" id="remover-selecionado">Excluir Selecionado</button>
-        <button class="btn btn-warning btn-sm" id="mover-cima">Move para cima</button>
-        <button class="btn btn-warning btn-sm" id="mover-baixo">Move para baixo</button>
-        <button class="btn btn-danger btn-sm" id="remover-finalizados">Limpar Completos</button>
-        <button class="btn btn-danger btn-sm" id="apaga-tudo">Limpar Lista</button>
-        <button class="btn btn-success btn-sm" id="salvar-tarefas">Salvar Lista</button>
-    </section>
+    <header id="header-container">
+        <div id="title-container">
+            <h1 id="title">Minha Lista de Tarefas</h1>
+        </div>
+    </header>
+    <main id="main-container">
+        <div id="input-container">
+            <p id="funcionamento"><em>Clique duas vezes em um item para marcá-lo como completo</em></p>
+            <input id="texto-tarefa" type="text" placeholder="digite as tarefas">
+            <button id="criar-tarefa">Criar tarefa</button>
+        </div>
+        <div>
+            <ol id="lista-tarefas"></ol>
+        </div>
+        <div id="control-container">
+            <button class="controls" id="apaga-tudo" type="reset">Apaga tudo</button>
+            <button class="controls" id="remover-finalizados">Remover finalizados</button>
+            <button class="controls" id="remover-selecionado">Remover selecionado</button>
+            <button class="controls" id="salvar-tarefas">Salvar tarefas</button>
+            <button class="controls" id="mover-cima">Sobe</button>
+            <button class="controls" id="mover-baixo">Desce</button>
+        </div>
+        <script src="script.js"></script>
     </main>
-    <footer></footer>
 
-
-
-
-
-    <script src="script.js"></script>
 </body>
 
 </html>

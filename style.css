@@ -1,203 +1,77 @@
-    body {
-        text-align: center;
-    }
-    
-    header {
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-    }
-    
-    #texto-tarefa {
-        position: relative;
-        width: 150px;
-        font-size: 15px;
-        padding: 8px;
-    }
-    
-    #lista-tarefas {
-        width: 30px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-    }
-    
-    li {
-        background-color: white;
-        size: 100px;
-        position: inside;
-        font-size: 20px;
-    }
-    
-    #text {
-        font-size: 20pt;
-    }
-    
-    .selected {
-        background-color: gray;
-    }
-    
-    #toAdd {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 20px;
-        font-size: 20px;
-        margin: 0;
-        padding-top: 20px;
-        gap: 5px;
-    }
-    
-    .buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    button {
-        padding: 10px;
-        border-radius: 5px;
-        font-size: large;
-        font-weight: 200;
-    }
-    
-    .buttons-container {
-        display: flex;
-        margin: 0;
-        padding: 2px;
-        gap: 5px;
-    }
-    
-    #apaga-tudo {
-        background-color: rgb(196, 196, 196);
-    }
-    
-    #remover-finalizados {
-        background-color: rgb(250, 123, 123);
-    }
-    
-    #salvar-tarefas {
-        background-color: orange;
-    }
-    
-    #mover-cima {
-        background-color: rgb(248, 248, 108);
-    }
-    
-    #mover-baixo {
-        background-color: rgb(248, 248, 108);
-    }
-    
-    #remover-selecionado {
-        background-color: rgb(250, 123, 123);
-    }
-    
-    @media screen and (max-width: 680px) {
-        body {
-            text-align: center;
-            width: 100%;
-        }
-        header {
-            text-align: center;
-            margin: 0;
-            background-color: orange;
-            padding: 20px;
-            border: 5px solid black;
-            width: 100%;
-        }
-        h1 {
-            font-size: 20pt;
-        }
-        #toAdd {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 20px;
-            margin: 0;
-            padding: 15px;
-            padding-bottom: 0;
-            margin-bottom: 0;
-            gap: 5px;
-        }
-        #texto-tarefa {
-            position: relative;
-            width: 250px;
-            font-size: 12pt;
-            padding: 5px;
-        }
-        #criar-tarefa {
-            position: relative;
-            display: inline-block;
-            width: 80px;
-            height: 32px;
-        }
-        #lista-tarefas {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            padding-top: 65px;
-        }
-        li {
-            word-break: break-word;
-            background-color: white;
-            border: 1px solid black;
-            size: 180px;
-            position: inside;
-            font-size: 12pt;
-        }
-        .buttons {
-            display: flex;
-            width: 20px;
-            height: 65px;
-            font-size: 12pt;
-            padding: 0;
-            border-radius: 20px;
-        }
-        .buttons {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding-top: 0;
-            margin-top: 0;
-        }
-        button {
-            width: 100px;
-            height: 50px;
-            font-family: 'Indie Flower', cursive;
-            padding: 2px;
-            border-radius: 5px;
-            font-size: 12pt;
-            font-weight: 700;
-        }
-        .buttons-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 2px;
-            gap: 5px;
-        }
-        main {
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            padding: 0;
-            text-align: center;
-        }
-    }
+body {
+    background-color: rgb(232, 244, 241);
+    font-family: sans-serif;
+}
+
+h1,
+h2 {
+    font-family: Epilogue, Verdana, sans-serif;
+}
+
+#header-container {
+    align-items: center;
+    display: flex;
+    margin: -8px -12px 5px;
+}
+
+#title-container {
+    margin: auto;
+}
+
+#title {
+    color: black;
+    letter-spacing: 2.5px;
+    margin: 17.44px 72px;
+}
+
+.link {
+    color: rgb(257, 255, 255);
+    letter-spacing: 0.7px;
+    text-decoration: none;
+}
+
+#main-container {
+    border-radius: 23px;
+    box-shadow: 0 0 18px dimgray;
+    margin: 5%;
+}
+
+#input-container {
+    background-color: rgba(105, 105, 105, 0.15);
+    border-radius: 10px;
+    margin: 3% 5%;
+    padding: 2.5% 0 5%;
+    text-align: center;
+}
+
+#texto-tarefa {
+    text-align: center;
+    width: 29%;
+}
+
+#lista-tarefas {
+    margin: 2.5%;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+#control-container {
+    margin: 3%;
+    text-align: center;
+}
+
+.controls {
+    box-shadow: 0 0 3px dimgray;
+}
+
+#phrase {
+    background-color: rgb(68, 73, 85);
+    margin-top: 5%;
+    padding: 1% 0;
+}
