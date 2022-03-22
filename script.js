@@ -28,3 +28,17 @@ function criarBotaoTarefas(Adicione) {
 };
 
 criarBotaoTarefas("Adicione");
+
+function colorItemList() {
+    listaTarefas.addEventListener('click', (event) => {
+        const Event = event.target;
+        const Itemlist = document.getElementsByTagName('li');
+        if (Event.localName === 'li') {
+            for (let index = 0; index < Itemlist.length; index += 1) {
+                Itemlist[index].classList.remove('selected');
+            }
+            Event.classList.add('selected');
+        }
+    });
+}
+colorItemList();
