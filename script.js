@@ -2,6 +2,7 @@ const createTaskButton = document.querySelector('#criar-tarefa');
 const toDoList = document.querySelector('#lista-tarefas');
 
 createTaskButton.addEventListener('click', () => {
+    // https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener
     const taskText = document.querySelector('#texto-tarefa');
     const newTask = document.createElement('li');
     newTask.innerText = taskText.value;
@@ -24,6 +25,7 @@ toDoList.addEventListener('click', (event) => {
 
 toDoList.addEventListener('dblclick', (event) => {
     event.target.classList.toggle('completed');
+    // https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
 });
 
 
@@ -55,11 +57,13 @@ saveTasksButton.addEventListener('click', () => {
     }
     localStorage.setItem('tasks', JSON.stringify(tasks));
     localStorage.setItem('classTasks', JSON.stringify(classTasks));
+    // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 });
 
 window.onload = () => {
     const retrieveTasks = JSON.parse(localStorage.getItem('tasks'));
     const retrieveClassTasks = JSON.parse(localStorage.getItem('classTasks'));
+    // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
     if (retrieveTasks !== null) {
         for (let i = 0; i < retrieveTasks.length; i += 1) {
             const newTask = document.createElement('li');
@@ -76,6 +80,7 @@ moveUpButton.addEventListener('click', () => {
     const grayLi = document.querySelector('.gray');
     if (grayLi !== null) {
         const previousTask = grayLi.previousElementSibling;
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/previousElementSibling
         if (previousTask !== null) {
             const transition1 = grayLi.innerText;
             const transition2 = previousTask.innerText;
@@ -95,6 +100,7 @@ moveDownButton.addEventListener('click', () => {
     const grayLi = document.querySelector('.gray');
     if (grayLi !== null) {
         const previousTask = grayLi.nextElementSibling;
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling
         if (previousTask !== null) {
             const transition1 = grayLi.innerText;
             const transition2 = previousTask.innerText;
